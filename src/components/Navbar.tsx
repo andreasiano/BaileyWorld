@@ -17,10 +17,10 @@ const Navbar = () => {
                     <BsSearch className='absolute top-0 right-0 mt-4 mr-5 text-gray-500' size={20}/>
                 </div>
                 <div className="flex text-slate-700 gap-4">
-                    <div className="icon_wrapper">
+                    <div className="icon_wrapper w-[50px] h-[50px]">
                         <AiOutlineUser/>
                     </div>
-                    <div className="icon_wrapper hover:text-white duration-500 hover:bg-blue-300 cursor-pointer relative">
+                    <div className="icon_wrapper w-[50px] h-[50px] hover:text-white duration-500 hover:bg-blue-300 cursor-pointer relative">
                         <AiOutlineShoppingCart/>
                         <CartCountBadge size="w-[25px] h-[25px]"/>
                     </div>

@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="xl:col-span-2 xl:row-start-1 xl:row-end-[-1] relative">
             <div className='w-full h-full object-cover rounded-lg absolute bg-black/30'></div>
             <img className='w-full h-[600px] object-cover rounded-lg' src={hero_1} alt="hero image" />
-            <div className='absolute max-w-[470px] sm:ml-16 ml-8 top-[50%] -translate-y-[50%]'>
+            <div className='absolute w-[200px] sm:w-[470px] sm:ml-16 ml-8 top-[50%] -translate-y-[50%]'>
                 <p className='text-xl font-gruppo sm:text-lg md:text-2xl font-bold text-white'>20% discount for your first Book</p>
                 <h2 className='text-[40px] pb-5 sm:text-[40px] md:text-[60px] text-white font-shoulder'>Find Your New SciFi Book</h2>
                 <p className='text-xl font-gruppo pt-4 font-bold text-white'>Millions of books on low prices</p>

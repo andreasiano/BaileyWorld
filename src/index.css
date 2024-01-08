@@ -5,10 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 @layer components {
     .icon_wrapper {
-        @apply border border-gray-300 rounded-full w-[50px] h-[50px]
+        @apply border border-gray-300 rounded-full
         grid place-items-center text-[22px]
     }
 }

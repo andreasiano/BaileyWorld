@@ -18,11 +18,11 @@ const CyberpunkCategory = () => {
       <div className="lg:flex items-center">
         <div>
           <h3 className="font-shoulder font-bold text-slate-700 text-4xl">CyberPunk Genre</h3>
-          <p className="text-gray-400 font-bold font-gruppo mt-2 w-[600px]">Cyberpunk is a subgenre of science fiction in a dystopian futuristic setting that tends to focus on a "combination of lowlife and high tech"</p>
+          <p className="text-gray-400 lg:max-w-[600px] font-bold font-gruppo mt-2">Cyberpunk is a subgenre of science fiction in a dystopian futuristic setting that tends to focus on a "combination of lowlife and high tech"</p>
         </div>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 pt-8 gap-2">
-        <img className="w-full h-full object cover" src={img1} alt="" />
+        <img className="w-full h-full object-cover" src={img1} alt="" />
         {data.map((el) => (
             <ProductCard key={el.id} name={el.name} author={el.author} img={el.img} price={el.price}/>
           ))}
