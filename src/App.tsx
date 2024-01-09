@@ -1,27 +1,19 @@
-import MobNav from "./components/MobNav"
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Categories from "./components/Categories"
-import CyberpunkCategory from "./components/CyberpunkCategory"
-import SpaceCategory from "./components/SpaceCategory"
-import AndroidCategory from "./components/AndroidCategory"
-import HardScifiCategory from "./components/HardScifiCategory"
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 
 const App = () => {
   return (
-    <main>
-      <Navbar/>
-      <MobNav/>
-      <Hero/>
-      <Categories/>
-      <CyberpunkCategory/>
-      <SpaceCategory/>
-      <AndroidCategory/>
-      <HardScifiCategory/>
-    </main>
-  )
-}
+    <BrowserRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
+};
 
 export default App
 
