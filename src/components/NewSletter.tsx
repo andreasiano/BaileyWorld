@@ -2,7 +2,7 @@ import {LuMailOpen} from 'react-icons/lu'
 
 const NewSletter = () => {
   return (
-    <div className="bg-blue-400 mt-16">
+    <div className="bg-sky-500 mt-16">
       <div className="container py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white">
         <div className="flex flex-shrink-0 items-center gap-4">
           <LuMailOpen className='text-[60px]'/>

@@ -3,7 +3,8 @@ import {BsSearch} from 'react-icons/bs'
 import {AiOutlineUser, AiOutlineShoppingCart} from 'react-icons/ai'
 import CartCountBadge from "./CartCountBadge";
 
-const Navbar = () => {
+
+const Navbar = ({setShowCart}: any) => {
   return (
     <div className="sticky font-shoulder top-0 bg-white z-10">
         <div className="container hidden lg:block">
@@ -20,7 +21,7 @@ const Navbar = () => {
                     <div className="icon_wrapper w-[50px] h-[50px]">
                         <AiOutlineUser/>
                     </div>
-                    <div className="icon_wrapper w-[50px] h-[50px] hover:text-white duration-500 hover:bg-blue-300 cursor-pointer relative">
+                    <div className="icon_wrapper w-[50px] h-[50px] hover:text-white duration-500 hover:bg-blue-300 cursor-pointer relative" onClick={() => setShowCart(true)}>
                         <AiOutlineShoppingCart/>
                         <CartCountBadge size="w-[25px] h-[25px]"/>
                     </div>
