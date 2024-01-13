@@ -18,7 +18,7 @@ const AndroidCategory = () => {
       <div className="lg:flex items-center">
         <div>
           <h3 className="font-shoulder font-bold text-slate-700 text-4xl">AndroidsRobots Genre</h3>
-          <p className="text-gray-400 lg:max-w-[600px] font-bold font-gruppo mt-2"> Artificial intelligence and robots are often portrayed in SF as social agents or technologies that extend human capabilities. Several depictions of artificial slave appear in classic stories.</p>
+          <p className="text-gray-400 lg:max-w-[600px] font-bold font-gruppo mt-2"> Artifi intelligence and robots are often portrayed in SF as social agents or technologies that extend human capabilities. Several depictions of artificial slave appear in classic stories.</p>
         </div>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 pt-8 gap-2">
