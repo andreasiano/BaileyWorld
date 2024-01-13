@@ -1,5 +1,4 @@
 import {AiOutlineShopping} from 'react-icons/ai'
-import { toast } from 'react-toastify';
 import { useCartContext } from '../context/CartContext';
 
 interface propsType {
@@ -14,7 +13,6 @@ interface propsType {
 const ProductCard: React.FC<propsType> = ({name, author, price, img}) => {
  const {addToCart} = useCartContext()
  const addProductToCart = () => {
-  toast.success('Added to cart')
   addToCart({img, name, price})
  }
   return (

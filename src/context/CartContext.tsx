@@ -4,6 +4,7 @@ interface ICartContext {
   product: any[];
   addToCart: (cart: any) => void;
   removeFromCart: (cart: any) => void;
+  
 }
 
 const CartContext = createContext<ICartContext>({
@@ -20,8 +21,16 @@ export const CartContextProvider: React.FC<ICartContextProvider> = ({ children }
   const [product, setProduct] = useState<any>([]);
 
   const addToCart = (cart: any) => {
-    setProduct((prevProducts: any) => [...prevProducts, cart]);
+
+    const isProductInCart = product.some((item) => areProductsEqual(item, cart));
+
+    if (!isProductInCart) {
+      setProduct((prevProducts: any) => [...prevProducts, cart]);
+    } else {
+      console.warn('Product is already in the cart');
+    }
   };
+
 
   const removeFromCart = (productToRemove: any) => {
     setProduct((prevProducts: any) =>

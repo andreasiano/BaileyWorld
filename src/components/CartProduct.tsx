@@ -1,6 +1,7 @@
 import React from 'react';
 import { RxCross1 } from 'react-icons/rx';
 import { useCartContext } from '../context/CartContext';
+import { FaMinus, FaPlus } from 'react-icons/fa'
 
 interface propsType {
   img: string;
@@ -20,8 +21,17 @@ const CartProduct: React.FC<propsType> = ({ img, name, price }) => {
         <img className="w-[100px]" src={img} alt={name} />
         <div className='font-shoulder text-slate-700'>
           <h3 className="font-bold text-lg">{name}</h3>
-          <p className='font-bold text.md'>{price}$</p>
+          <p className='font-bold text-lg'>{price}$</p>
         </div>
+      </div>
+      <div className="flex items-center gap-3">
+        <button className="rounded-full duration-500 hover:text-white hover:bg-slate-400 border-slate-400 border-2 px-1 py-1">
+          <FaMinus size={10}/>
+        </button>
+        <span>{/* Display quantity here */}</span>
+        <button className="rounded-full hover:text-white duration-500 border-slate-400 hover:bg-slate-400 border-2 px-1 py-1">
+          <FaPlus size={10}/>
+        </button>
       </div>
       <RxCross1 onClick={removeProductFromCart} className='cursor-pointer' />
     </div>
