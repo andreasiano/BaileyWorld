@@ -4,6 +4,7 @@ import crash from '../assets/crash.jpg'
 import carbon from '../assets/carbon.jpg'
 import android from '../assets/android.jpg'
 import ProductCard from './ProductCard'
+import { motion } from 'framer-motion';
 
 const data = [
   {id: 0, img: crash, name: 'Snow Crash', author: 'Neal Stephenson', price: 18},
@@ -12,9 +13,29 @@ const data = [
   {id: 3, img: android, name: 'Do Androids Dream of Electric Sheep?', author: 'Philip K. Dick', price: 24}
 ]
 
+const FadeInAnimationVariant = {
+  initial: {
+    opacity: 0,
+    y: 100
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8
+    }
+  }
+}
+
 const CyberpunkCategory = () => {
   return (
-    <div className="container mb-16 pt-16">
+    <motion.div className="container mb-16 pt-16"
+    variants={FadeInAnimationVariant}
+    initial='initial'
+    whileInView='animate'
+    viewport= {{
+        once: true
+    }}>
       <div className="lg:flex items-center">
         <div>
           <h3 className="font-shoulder font-bold text-slate-700 text-4xl">CyberPunk Genre</h3>
@@ -27,7 +48,7 @@ const CyberpunkCategory = () => {
             <ProductCard key={el.id} id={el.id} name={el.name} author={el.author} img={el.img} price={el.price}/>
           ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

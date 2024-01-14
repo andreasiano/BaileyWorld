@@ -1,11 +1,27 @@
 import hero_1 from '../assets/banner-2.jpg'
 import { BsArrowRight } from 'react-icons/bs'
+import { motion } from 'framer-motion';
+
+const FadeInAnimationVariant = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+}
 
 const Hero = () => {
   return (
     <div className="container">
       <div className="grid xl:grid-rows-2 gap-8">
-        <div className="xl:col-span-2 xl:row-start-1 xl:row-end-[-1] relative">
+        <motion.div className="xl:col-span-2 xl:row-start-1 xl:row-end-[-1] relative"
+        variants={FadeInAnimationVariant}
+        initial='initial'
+        whileInView='animate'>
             <div className='w-full h-full object-cover rounded-lg absolute bg-black/30'></div>
             <img className='w-full h-[600px] object-cover rounded-lg' src={hero_1} alt="hero image" />
             <div className='absolute w-[200px] sm:w-[470px] sm:ml-16 ml-8 top-[50%] -translate-y-[50%]'>
@@ -14,7 +30,7 @@ const Hero = () => {
                 <p className='text-xl font-gruppo pt-4 font-bold text-white'>Millions of books on low prices</p>
                 <div className='hover:bg-blue-300 outline-white border-2 font-shoulder mt-5 text-white duration-500 rounded-full w-fit flex items-center gap-4 px-4 py-2 md:text-[20px] sm:px-6 sm:py-3 font-bold cursor-pointer'>Shop Now<BsArrowRight/></div>
             </div>
-        </div>
+      </motion.div>
       </div>
     </div>
   )

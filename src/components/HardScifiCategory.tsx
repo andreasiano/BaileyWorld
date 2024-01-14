@@ -4,6 +4,7 @@ import contact from '../assets/contact.jpg'
 import ready from '../assets/ready.jpg'
 import scout from '../assets/scout.jpg'
 import ProductCard from './ProductCard'
+import { motion } from 'framer-motion';
 
 const data = [
   {id: 0, img: anhilation, name: 'Anhilation', author: 'Jef Van Der Meer', price: 13},
@@ -12,9 +13,29 @@ const data = [
   {id: 3, img: scout, name: 'The Body Scout', author: 'Lincoln Michel', price: 24}
 ]
 
+const FadeInAnimationVariant = {
+  initial: {
+    opacity: 0,
+    y: 100
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8
+    }
+  }
+}
+
 const HardScifiCategory = () => {
   return (
-    <div className="container mb-16 pt-4">
+    <motion.div className="container mb-16 pt-4"
+    variants={FadeInAnimationVariant}
+    initial='initial'
+    whileInView='animate'
+    viewport= {{
+        once: true
+    }}>
       <div className="lg:flex items-center">
         <div>
           <h3 className="font-shoulder font-bold text-slate-700 text-4xl">HardScifi Genre</h3>
@@ -27,7 +48,7 @@ const HardScifiCategory = () => {
             <ProductCard key={el.id} id={el.id} name={el.name} author={el.author} img={el.img} price={el.price}/>
           ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -1,13 +1,33 @@
-
-
 import { GiPlanetCore } from "react-icons/gi";
 import {BsSearch} from 'react-icons/bs'
 import {AiOutlineUser, AiOutlineShoppingCart} from 'react-icons/ai'
 import CartCountBadge from "./CartCountBadge";
+import { motion } from 'framer-motion';
+
+const FadeInAnimationVariant = {
+    initial: {
+      opacity: 0,
+      x: 100
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  }
+
 
 const MobNav =  ({setShowCart}: any) => {
   return (
-    <div className="sticky font-shoulder mt-4 top-0 bg-white z-10">
+    <motion.div className="sticky font-shoulder mt-4 top-0 bg-white z-10"
+    variants={FadeInAnimationVariant}
+    initial='initial'
+    whileInView='animate'
+    viewport= {{
+        once: true
+    }}>
         <div className="container lg:hidden">
             <div className="flex justify-between items-center px-4 py-8">
                 <div className="flex items-center gap-6">
@@ -28,7 +48,7 @@ const MobNav =  ({setShowCart}: any) => {
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
