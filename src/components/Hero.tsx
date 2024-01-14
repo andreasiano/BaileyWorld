@@ -21,7 +21,7 @@ const Hero = () => {
         <motion.div className="xl:col-span-2 xl:row-start-1 xl:row-end-[-1] relative"
         variants={FadeInAnimationVariant}
         initial='initial'
-        whileInView='animate'>
+        animate='animate'>
             <div className='w-full h-full object-cover rounded-lg absolute bg-black/30'></div>
             <img className='w-full h-[600px] object-cover rounded-lg' src={hero_1} alt="hero image" />
             <div className='absolute w-[200px] sm:w-[470px] sm:ml-16 ml-8 top-[50%] -translate-y-[50%]'>

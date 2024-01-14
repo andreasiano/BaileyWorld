@@ -13,7 +13,7 @@ const FadeInAnimationVariant = {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.5
+        duration: 0.9
       }
     }
   }
@@ -24,10 +24,7 @@ const MobNav =  ({setShowCart}: any) => {
     <motion.div className="sticky font-shoulder mt-4 top-0 bg-white z-10"
     variants={FadeInAnimationVariant}
     initial='initial'
-    whileInView='animate'
-    viewport= {{
-        once: true
-    }}>
+    animate='animate'>
         <div className="container lg:hidden">
             <div className="flex justify-between items-center px-4 py-8">
                 <div className="flex items-center gap-6">
