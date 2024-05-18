@@ -6,8 +6,7 @@ interface propsType {
     author: string;
     price: number;
     img: string;
-    id: number
-    
+    id: number 
 }
 
 const ProductCard: React.FC<propsType> = ({name, author, price, img}) => {
